@@ -1,0 +1,35 @@
+{
+    "allowCustomDataForDataTypeAny": true,
+    "functions": [
+        {
+            "description": "Returns a random integer between 100 and 1000.",
+            "id": "PULL",
+            "name": "PULL",
+            "parameters": [
+                {
+                    "description": "Cell reference for subject",
+                    "name": "subjectRef",
+                    "type": "string"
+                },
+                {
+                    "description": "Cell reference for metric",
+                    "name": "metricRef",
+                    "type": "string"
+                },
+                {
+                    "description": "Cell reference for scenario",
+                    "name": "scenarioRef",
+                    "type": "string"
+                },
+                {
+                    "description": "Cell reference for period",
+                    "name": "periodRef",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        }
+    ]
+}

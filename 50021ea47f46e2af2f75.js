@@ -1,0 +1,1 @@
+function PULL(o,t,L,n){return Math.floor(901*Math.random())+100}CustomFunctions.associate("PULL",PULL),CustomFunctions.associate("PULL",PULL);
