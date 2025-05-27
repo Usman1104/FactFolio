@@ -2,29 +2,80 @@
     "allowCustomDataForDataTypeAny": true,
     "functions": [
         {
-            "description": "Returns a random integer between 100 and 1000.",
+            "description": "Load data from FactFolio",
             "id": "PULL",
             "name": "PULL",
             "parameters": [
                 {
-                    "description": "Cell reference for subject",
-                    "name": "subjectRef",
+                    "description": "The subject (e.g., \"Asset: Solar One\")",
+                    "name": "subject",
                     "type": "string"
                 },
                 {
-                    "description": "Cell reference for metric",
-                    "name": "metricRef",
+                    "description": "The metric to pull (e.g., \"Total revenues\")",
+                    "name": "metric",
                     "type": "string"
                 },
                 {
-                    "description": "Cell reference for scenario",
-                    "name": "scenarioRef",
+                    "description": "The scenario (\"Actual\", \"Budget\", or \"Forecast\")",
+                    "name": "scenario",
                     "type": "string"
                 },
                 {
-                    "description": "Cell reference for period",
-                    "name": "periodRef",
+                    "description": "The period (\"Monthly\", \"Quarterly\", \"Semi-annually\", \"Annual\", or \"YTD\")",
+                    "name": "period",
                     "type": "string"
+                },
+                {
+                    "description": "The reference date (e.g., \"2024-01-01\")",
+                    "name": "date",
+                    "type": "string"
+                }
+            ],
+            "result": {
+                "type": "number"
+            }
+        },
+        {
+            "description": "Upload data to FactFolio",
+            "id": "PUSH",
+            "name": "PUSH",
+            "parameters": [
+                {
+                    "description": "The data value to upload",
+                    "name": "uploadData",
+                    "type": "number"
+                },
+                {
+                    "description": "The subject (e.g., \"Asset: Solar One\")",
+                    "name": "subject",
+                    "type": "string"
+                },
+                {
+                    "description": "The metric to pull (e.g., \"Total revenues\")",
+                    "name": "metric",
+                    "type": "string"
+                },
+                {
+                    "description": "The scenario (\"Actual\", \"Budget\", or \"Forecast\")",
+                    "name": "scenario",
+                    "type": "string"
+                },
+                {
+                    "description": "The period (\"Monthly\", \"Quarterly\", \"Semi-annually\", \"Annual\", or \"YTD\")",
+                    "name": "period",
+                    "type": "string"
+                },
+                {
+                    "description": "The reference date (e.g., \"2024-01-01\")",
+                    "name": "date",
+                    "type": "string"
+                },
+                {
+                    "description": "Optional multiplier for the upload data",
+                    "name": "multiplier",
+                    "optional": true,
+                    "type": "number"
                 }
             ],
             "result": {
